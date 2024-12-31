@@ -14,3 +14,7 @@ npm run dev
 # Build for production in the dist/ directory
 npm run build
 ```
+# Future Additions
+Add Models
+Add sound effects
+Make flickering door light
