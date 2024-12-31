@@ -323,6 +323,32 @@ renderer.setSize(sizes.width, sizes.height)
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 
 /**
+ * Shadows
+ */
+
+renderer.shadowMap.enabled = true
+renderer.shadowMap.type = THREE.PCFSoftShadowMap
+
+// Cast and recieve
+directionalLight.castShadow = true
+ghost1.castShadow = true
+ghost1.castShadow = true
+ghost1.castShadow = true
+
+walls.castShadow = true
+walls.receiveShadow = true
+roof.castShadow = true
+floor.receiveShadow = true
+
+// since grave is in a group, we have to loop through it
+for(const grave of graves.children){
+    grave.castShadow = true
+    grave.recieveShadow = true
+}
+
+
+
+/**
  * Animate
  */
 const timer = new Timer()
