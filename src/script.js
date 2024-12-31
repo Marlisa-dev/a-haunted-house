@@ -346,7 +346,27 @@ for(const grave of graves.children){
     grave.recieveShadow = true
 }
 
+// Mapping the camera for shadow
+directionalLight.shadow.mapSize.width = 256
+directionalLight.shadow.mapSize.height = 256
+directionalLight.shadow.camera.top = 8
+directionalLight.shadow.camera.right = 8
+directionalLight.shadow.camera.bottom = - 8
+directionalLight.shadow.camera.left = - 8
+directionalLight.shadow.camera.near = 1
+directionalLight.shadow.camera.far = 20
 
+ghost1.shadow.mapSize.width = 256
+ghost1.shadow.mapSize.height = 256
+ghost1.shadow.camera.top = 10
+
+ghost2.shadow.mapSize.width = 256
+ghost2.shadow.mapSize.height = 256
+ghost2.shadow.camera.top = 10
+
+ghost3.shadow.mapSize.width = 256
+ghost3.shadow.mapSize.height = 256
+ghost3.shadow.camera.top = 10
 
 /**
  * Animate
